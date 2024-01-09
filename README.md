@@ -1,4 +1,4 @@
-### AutoBanner Generator
+## AutoBanner Generator
 
 
 ## Overview
