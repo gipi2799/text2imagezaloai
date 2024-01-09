@@ -1,0 +1,37 @@
+data_path = '.../train'
+data_image_path = '.../train/images'
+data_frame = pd.read_csv(os.path.join(data_path, "info.csv"))
+
+data_frame["bannerImage"] = data_frame["bannerImage"].apply(
+    lambda x: os.path.join(data_image_path, x)
+)
+data_frame.head()
+
+from deep_translator import GoogleTranslator
+from tqdm import tqdm
+translator = GoogleTranslator(source='vi', target='en')
+translated = []
+for i in tqdm(range(len(data_frame['caption']))):
+    translated_text = translator.translate(data_frame['caption'][i])
+    translated.append(translated_text)
+data_frame['caption'] = translated
+
+import re
+caption_process=[]
+length_token = []
+max_tokens = 0
+# Load the tokenizer.
+tokenizer = SimpleTokenizer()
+for i in range(0,len(data_frame)):
+    #msg = re.sub('[^\w\d\s]', ' ', data_frame['caption'][i])
+    #caption_process.append(msg)
+    tokens = tokenizer.encode(data_frame['caption'][i])
+    length_token.append(tokens)
+#data_frame['caption_process']=caption_process
+data_frame['length_tokens']=length_token
+data_frame
+
+for i in range(len(data_frame['length_tokens'])):
+    if len(data_frame['length_tokens'][i]) > max_tokens:
+        max_tokens = len(data_frame['length_tokens'][i])
+print(max_tokens)
