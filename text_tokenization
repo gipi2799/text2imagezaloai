@@ -1,0 +1,16 @@
+# The padding token and maximum prompt length are specific to the text encoder.
+# If you're using a different text encoder be sure to change them accordingly.
+PADDING_TOKEN = 49407
+MAX_PROMPT_LENGTH = 77
+tokenizer = SimpleTokenizer()
+#  Method to tokenize and pad the tokens.
+def process_text(caption):
+    tokens = tokenizer.encode(caption)
+    tokens = tokens + [PADDING_TOKEN] * (MAX_PROMPT_LENGTH - len(tokens))
+    return np.array(tokens)
+
+# Collate the tokenized captions into an array.
+tokenized_texts = np.empty((len(data_frame), MAX_PROMPT_LENGTH))
+all_captions = list(data_frame["caption"].values)
+for i, caption in enumerate(all_captions):
+    tokenized_texts[i] = process_text(caption)
