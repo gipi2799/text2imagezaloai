@@ -3,7 +3,7 @@
 
 ## Overview
 
-In the fast-paced world of digital advertising, the swift creation of captivating product banners plays a critical role. The AutoBanner Generator project addresses this challenge by inviting participants to harness the power of AI for automatic generation of visually appealing product advertising banners. The primary goal is to develop a model that, based on provided product descriptions, can autonomously craft banners that mirror the creativity and engagement found in human-designed templates.
+In the fast-paced world of digital advertising, the swift creation of captivating product banners plays a critical role. The AutoBanner Generator project addresses this challenge by inviting participants to harness the power of AI for the automatic generation of visually appealing product advertising banners. The primary goal is to develop a model that, based on provided product descriptions, can autonomously craft banners that mirror the creativity and engagement found in human-designed templates.
 # Main Features
 - Automated Banner Generation: The core functionality revolves around creating an AI model capable of producing product advertising banners without human intervention.
 - Creative Content Synthesis: The model is designed to synthesize creative and engaging visual content that closely aligns with the given product descriptions.
@@ -40,9 +40,11 @@ To use the AutoBanner Generator, follow these simple steps:
 1. Prepare your input data in a CSV file.
 2. Run the generator script
 python generate_banners.py --input_file input_data.csv --output_dir output_banners/
+
 ##Data Preprocessing
 Detail the data preprocessing steps, including any scripts or tools used. If applicable, provide instructions on how users can preprocess their own data to use with your project
 python preprocess_data.py --input_path data/raw_data.csv --output_path data/processed_data.csv
+
 ##License
 This project is licensed under the [MIT License](LICENSE).
 
