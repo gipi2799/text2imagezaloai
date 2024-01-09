@@ -35,17 +35,17 @@ By successfully implementing this AI solution, participants aim to streamline th
 ## Installation
 Ensure you have the necessary dependencies installed by running:
 pip install -r requirements.txt
-## Usage
+#Usage
 To use the AutoBanner Generator, follow these simple steps:
 1. Prepare your input data in a CSV file.
 2. Run the generator script
 python generate_banners.py --input_file input_data.csv --output_dir output_banners/
 
-##Data Preprocessing
+#Data Preprocessing
 Detail the data preprocessing steps, including any scripts or tools used. If applicable, provide instructions on how users can preprocess their own data to use with your project
 python preprocess_data.py --input_path data/raw_data.csv --output_path data/processed_data.csv
 
-##License
+#License
 This project is licensed under the [MIT License](LICENSE).
 
 ```bash
