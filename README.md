@@ -35,7 +35,7 @@ By successfully implementing this AI solution, participants aim to streamline th
 ## Installation
 Ensure you have the necessary dependencies installed by running:
 pip install -r requirements.txt
-#Usage
+## Usage
 To use the AutoBanner Generator, follow these simple steps:
 1. Prepare your input data in a CSV file.
 2. Run the generator script
